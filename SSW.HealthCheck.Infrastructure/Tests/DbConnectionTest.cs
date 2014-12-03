@@ -18,12 +18,28 @@
         private readonly string description = Labels.DbTestDescription;
         private readonly bool isDefault = true;
         private int order;
+        private List<string> connectionStringNamesToBeExcluded = new List<string>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DbConnectionTest" /> class.
         /// </summary>
         public DbConnectionTest(int order = 0)
         {
+            this.Order = order;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DbConnectionTest" /> class.
+        /// </summary>
+        /// <param name="order">The order.</param>
+        /// <param name="connectionStringNamesToBeExcluded">The connection strings to be excluded.</param>
+        public DbConnectionTest(int order = 0, List<string> connectionStringNamesToBeExcluded = null)
+        {
+            if (connectionStringNamesToBeExcluded != null)
+            {
+                this.connectionStringNamesToBeExcluded = connectionStringNamesToBeExcluded;
+            }
+
             this.Order = order;
         }
 
@@ -173,6 +189,15 @@
         public void Test(ITestContext ctx)
         {
             var settings = ConfigurationManager.ConnectionStrings.OfType<ConnectionStringSettings>().ToList();
+
+            if (this.connectionStringNamesToBeExcluded != null && this.connectionStringNamesToBeExcluded.Any())
+            {
+                settings =
+                    settings.Where(
+                        s =>
+                        !this.connectionStringNamesToBeExcluded.Any(
+                            cs => s.Name.Equals(cs, StringComparison.OrdinalIgnoreCase))).ToList();
+            }
 
             var failedSettings = new System.Collections.Concurrent.ConcurrentBag<ConnectionStringSettings>();
             var settingsCount = settings.Count();

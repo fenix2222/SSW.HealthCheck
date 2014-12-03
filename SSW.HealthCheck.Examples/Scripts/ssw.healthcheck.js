@@ -5,17 +5,14 @@ var ssw;
             function HealthCheckController($scope, $http, tests) {
                 var _this = this;
                 $scope.tests = tests;
-                var failed = [];
-                var warning = [];
-                var passed = [];
-
-                //$scope.to_trusted = function (html_code) {
-                //    return $sce.trustAsHtml(html_code);
-                //}
 
                 // convert tests into mapping
                 var testsByKey = {};
                 var allTests = [];
+                var failed = [];
+                var warning = [];
+                var passed = [];
+
                 for (var i = 0; i < $scope.tests.length; i++) {
                     for (var j = 0; j < $scope.tests[i].TestMonitors.length; j++) {
                         allTests.push($scope.tests[i].TestMonitors[j]);
@@ -28,11 +25,8 @@ var ssw;
                 }
 
                 this.$http = $http;
-                this.UpdateStats = function (data)
-                {
-                    var $allTests = $(".panel");
-                    
-                    var all = $allTests.length;
+                this.UpdateStats = function (data) {
+                    var all = allTests.length;
                     if (data.Result.Success && !data.Result.ShowWarning) {
                         passed.push(data.Key);
                     }
@@ -52,8 +46,7 @@ var ssw;
                     $("#pending-stat").text((all - passed.length - warning.length - failed.length));
                 };
                 this.Check = function (model, reset) {
-                    var that = this;
-
+                    var that = _this;
                     if (!reset) {
                         var index = passed.indexOf(model.Key);
                         if (index > -1) {
@@ -73,7 +66,6 @@ var ssw;
 
                     $http.get(($("#ng-app").data("root-path") || "/") + "HealthCheck/Check?Key=" + model.Key).success(function (data, status, headers, config) {
                         that.UpdateStats(data);
-                        console.log(data);
                     }).error(function (data, status, headers, config) {
                         console.log(data);
                     });
@@ -82,7 +74,6 @@ var ssw;
                     passed.length = 0;
                     failed.length = 0;
                     warning.length = 0;
-
                     for (var k in allTests) {
                         var test = allTests[k];
                         _this.Check(test, true);
@@ -92,7 +83,6 @@ var ssw;
                     passed.length = 0;
                     failed.length = 0;
                     warning.length = 0;
-
                     for (var k in allTests) {
                         var test = allTests[k];
                         if (!test.IsRunning && test.IsDefault) {

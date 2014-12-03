@@ -9,6 +9,7 @@ namespace $rootnamespace$.App_Start
 	using SSW.HealthCheck.Infrastructure;
     using SSW.HealthCheck.Infrastructure.Tests;
     using SSW.HealthCheck.Mvc5;
+	using System.Web.Hosting;
 
     public static class HealthCheckConfig 
     {
@@ -27,6 +28,7 @@ namespace $rootnamespace$.App_Start
             svc.Add(new DbConnectionTest(2));
 			svc.Add(new SmtpTest(3));
             svc.Setup<Hubs.HealthCheckHub>();
+			svc.Trace();
         }
     }
 }

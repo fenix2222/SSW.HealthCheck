@@ -1,6 +1,8 @@
 ﻿namespace SSW.HealthCheck.Mvc4
 {
     using System;
+    using System.Net;
+    using System.Reflection;
 
     using Microsoft.AspNet.SignalR;
 
@@ -93,6 +95,52 @@
         public static HealthCheckHubNotifier<T> Setup<T>(this HealthCheckService svc) where T : Microsoft.AspNet.SignalR.Hubs.IHub
         {
             return new HealthCheckHubNotifier<T>(svc);
+        }
+
+        public static void Trace(this HealthCheckService svc) 
+        {
+            try
+            {
+                var dll = Assembly.GetCallingAssembly().FullName;
+                var url = FullyQualifiedApplicationPath(svc);
+
+                var request =
+                    (HttpWebRequest)
+                    WebRequest.Create(
+                        string.Format("http://service.sswhealthcheck.com/tracing/save?dll={0}&url={1}", dll, url));
+                request.GetResponse();
+            }
+            catch
+            {
+            }
+        }
+
+        public static string FullyQualifiedApplicationPath(HealthCheckService svc)
+        {
+ 
+            //Return variable declaration
+            var appPath = string.Empty;
+ 
+            //Getting the current context of HTTP request
+            var context = svc.HttpContext;
+ 
+            //Checking the current context content
+            if (context != null)
+            {
+                //Formatting the fully qualified website url/name
+                appPath = string.Format("{0}://{1}{2}{3}",
+                                        context.Request.Url.Scheme,
+                                        context.Request.Url.Host,
+                                        context.Request.Url.Port == 80
+                                            ? string.Empty
+                                            : ":" + context.Request.Url.Port,
+                                        context.Request.ApplicationPath);
+            }
+ 
+            if (!appPath.EndsWith("/"))
+                appPath += "/";
+ 
+            return appPath;
         }
     }
 }

@@ -4,8 +4,9 @@
 		<id>SSW.HealthCheck.Core</id>
 		<version>$version$</version>
 		<title>SSW.HealthCheck.Core</title>
-		<authors>Igor Goldobin</authors>
-		<owners>Igor Goldobin</owners>
+		<authors>Mark Liu, Igor Goldobin</authors>
+		<owners>SSW</owners>
+		<iconUrl>http://www.gravatar.com/avatar/81d58a12bc544f1b4ea6f48200f665e0.png</iconUrl>
 		<projectUrl>https://www.sswhealthcheck.com</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>SSW Health Check provides a framework to write asynchronous tests to verify the state of a MVC website.</description>
@@ -15,6 +16,7 @@
 
 		<dependencies>
 			<dependency id="EntityFramework" version="6.1.0" />
+			<dependency id="Newtonsoft.Json" version="6.0.6" />
 		</dependencies>
 	</metadata>
 </package>

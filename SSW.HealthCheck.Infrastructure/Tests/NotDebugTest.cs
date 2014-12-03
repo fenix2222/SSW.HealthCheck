@@ -158,12 +158,12 @@ namespace SSW.HealthCheck.Infrastructure.Tests
         public void Test(ITestContext context)
         {
             var compilationSection = ConfigurationManager.GetSection("system.web/compilation") as CompilationSection;
-            Assert.PassWithWarning("Debug mode is on.");
+            
             if (compilationSection != null)
             {
                 if (compilationSection.Debug)
                 {
-                    Assert.Fails(Errors.DebugModeIsTrue);
+                    Assert.PassWithWarning("Debug mode is on.");
                 }
             }
         }

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+	<metadata>
+		<id>SSW.HealthCheck.ExtendedTests</id>
+		<version>$version$</version>
+		<title>SSW.HealthCheck.ExtendedTests</title>
+		<authors>Igor Goldobin</authors>
+		<owners>SSW</owners>
+		<iconUrl>http://www.gravatar.com/avatar/81d58a12bc544f1b4ea6f48200f665e0.png</iconUrl>
+		<projectUrl>https://www.sswhealthcheck.com</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>SSW HealthCheck.ExtendedTest provides additional tests for health check.</description>
+		<copyright />
+		<language>en-AU</language>
+		<tags>MVC</tags>
+	</metadata>
+</package>

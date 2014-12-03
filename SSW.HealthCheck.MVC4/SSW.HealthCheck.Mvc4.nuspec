@@ -4,8 +4,9 @@
 		<id>SSW.HealthCheck.Mvc4</id>
 		<version>$version$</version>
 		<title>SSW.HealthCheck.Mvc4</title>
-		<authors>Igor Goldobin</authors>
-		<owners>Igor Goldobin</owners>
+		<authors>Mark Liu, Igor Goldobin</authors>
+		<owners>SSW</owners>
+		<iconUrl>http://www.gravatar.com/avatar/81d58a12bc544f1b4ea6f48200f665e0.png</iconUrl>
 		<projectUrl>https://www.sswhealthcheck.com/</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>SSW Health Check provides a framework to write asynchronous tests to verify the state of a MVC 4 website.</description>
@@ -17,6 +18,7 @@
 			<dependency id="angularjs" version="1.2.2" />
 			<dependency id="bootstrap" version="3.0.0" />
 			<dependency id="Microsoft.AspNet.SignalR" version="[1.2.1]" />
+			<dependency id="Newtonsoft.Json" version="6.0.6" />
 			<dependency id="Microsoft.AspNet.WebApi" version="5.0.0" />
 			<dependency id="SSW.HealthCheck.Core" version="1.0.23" />
 		</dependencies>

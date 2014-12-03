@@ -18,8 +18,8 @@ namespace SSW.HealthCheck.MVC4.Examples.App_Start
         }
         public static void RegisterTests(HealthCheckService svc)
         {
-            svc.Add(new NotDebugTest());
-            svc.Add(new DbConnectionTest());
+            svc.Add(new NotDebugTest(0));
+            svc.Add(new DbConnectionTest(1));
             svc.Setup<SSW.HealthCheck.MVC4.Examples.Hubs.HealthCheckHub>();
         }
     }
