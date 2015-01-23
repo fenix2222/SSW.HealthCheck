@@ -9,7 +9,7 @@
 		<iconUrl>http://www.gravatar.com/avatar/81d58a12bc544f1b4ea6f48200f665e0.png</iconUrl>
 		<projectUrl>https://www.sswhealthcheck.com</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>SSW Health Check provides a framework to write asynchronous tests to verify the state of a MVC website.</description>
+		<description>SSW Health Check provides a framework to write asynchronous tests to verify the state of a MVC website. To contribute visit https://github.com/SSWConsulting/sswhealthcheck/tree/master </description>
 		<copyright />
 		<language>en-AU</language>
 		<tags>MVC</tags>

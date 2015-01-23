@@ -8,14 +8,14 @@
 		<owners>Igor Goldobin</owners>
 		<projectUrl>https://github.com/ssw-au/SSW.Framework.Web.Mvc/</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>SSW Health Check extension for Sql Verify framework.</description>
+		<description>SSW Health Check extension for Sql Verify framework. To contribute visit https://github.com/SSWConsulting/sswhealthcheck/tree/master </description>
 		<copyright />
 		<language>en-AU</language>
 		<tags>MVC</tags>
 
 		<dependencies>
 			<dependency id="SSW.SqlVerify.Core" version="1.1.0" />
-			<dependency id="SSW.HealthCheck.Core" version="1.0.22" />
+			<dependency id="SSW.HealthCheck.Core" version="1.0.37" />
 		</dependencies>
 	</metadata>
 </package>

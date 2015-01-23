@@ -9,9 +9,13 @@
 		<iconUrl>http://www.gravatar.com/avatar/81d58a12bc544f1b4ea6f48200f665e0.png</iconUrl>
 		<projectUrl>https://www.sswhealthcheck.com</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>SSW HealthCheck.ExtendedTest provides additional tests for health check.</description>
+		<description>SSW HealthCheck.ExtendedTest provides additional tests for health check. To contribute visit https://github.com/SSWConsulting/sswhealthcheck/tree/master </description>
 		<copyright />
 		<language>en-AU</language>
 		<tags>MVC</tags>
+
+		<dependencies>
+			<dependency id="SSW.HealthCheck.Core" version="1.0.38" />
+		</dependencies>
 	</metadata>
 </package>

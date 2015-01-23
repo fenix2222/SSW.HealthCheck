@@ -9,19 +9,19 @@
 		<iconUrl>http://www.gravatar.com/avatar/81d58a12bc544f1b4ea6f48200f665e0.png</iconUrl>
 		<projectUrl>https://www.sswhealthcheck.com</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>SSW Health Check provides a framework to write asynchronous tests to verify the state of a MVC website.</description>
+		<description>SSW Health Check provides a framework to write asynchronous tests to verify the state of a MVC website. To contribute visit https://github.com/SSWConsulting/sswhealthcheck/tree/master </description>
 		<copyright />
 		<language>en-AU</language>
 		<tags>MVC</tags>
 
 		<dependencies>
-			<dependency id="angularjs" version="1.2.2" />
+			<dependency id="AngularJS.Core" version="1.2.2" />
 			<dependency id="bootstrap" version="3.0.0" />
 			<dependency id="Microsoft.AspNet.SignalR" version="2.1.1" />
 			<dependency id="Newtonsoft.Json" version="6.0.6" />
 			<dependency id="Microsoft.Owin.Security" version="2.1.0" />
 			<dependency id="Microsoft.AspNet.WebApi" version="5.0.0" />
-			<dependency id="SSW.HealthCheck.Core" version="1.0.23" />
+			<dependency id="SSW.HealthCheck.Core" version="1.0.38" />
 		</dependencies>
 	</metadata>
 	<files>
