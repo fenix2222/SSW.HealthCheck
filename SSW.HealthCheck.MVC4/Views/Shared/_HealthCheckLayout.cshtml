@@ -1,6 +1,5 @@
 ﻿@using System.Reflection
 @using System.Web.Mvc.Html
-@using Infrastructure.Tests
 @using SSW.HealthCheck.Mvc4
 
 <html>
@@ -30,7 +29,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - <img style="vertical-align: middle; width: 50px" src="@Url.Content("~/Content/healthcheck/ssw.png")"> Powered by <a href="http://www.sswhealthcheck.com">SSW HealthCheck v@(Assembly.GetAssembly(typeof(NotDebugTest)).GetName().Version)</a></p>
+            <p>&copy; @DateTime.Now.Year - <img style="vertical-align: middle; width: 50px" src="@Url.Content("~/Content/healthcheck/ssw.png")"> Powered by <a href="http://www.sswhealthcheck.com">SSW HealthCheck v@(Assembly.GetAssembly(typeof(SSW.HealthCheck.Infrastructure.Tests.NotDebugTest)).GetName().Version)</a></p>
         </footer>
     </div>
 

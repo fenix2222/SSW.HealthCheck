@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(SSW.HealthCheck.Mvc5.Examples.App_Start.HealthCheckConfig), "PreStart")]
-namespace SSW.HealthCheck.Mvc5.Examples.App_Start 
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof($rootnamespace$.App_Start.HealthCheckConfig), "PreStart")]
+namespace $rootnamespace$.App_Start 
 {
 	using SSW.HealthCheck.Infrastructure;
     using SSW.HealthCheck.Infrastructure.Tests;
