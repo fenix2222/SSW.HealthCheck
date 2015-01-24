@@ -6,6 +6,7 @@ var ssw;
                 var _this = this;
                 $scope.tests = tests;
 
+                // convert tests into mapping
                 var testsByKey = {};
                 var allTests = [];
                 var failed = [];
@@ -124,6 +125,7 @@ var ssw;
                     }
                 };
 
+                // signalr
                 $.connection.hub.logging = true;
                 var healthCheckHub = $.connection.healthCheckHub;
                 var healthCheckServer = healthCheckHub.server;
@@ -151,3 +153,4 @@ var ssw;
     hcheck.value('tests', []);
     hcheck.controller('HealthCheck', ['$scope', '$http', 'tests', ssw.healthcheck.HealthCheckController]);
 })(ssw || (ssw = {}));
+//# sourceMappingURL=ssw.healthcheck.js.map

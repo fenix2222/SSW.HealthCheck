@@ -85,7 +85,7 @@
     </Reference>
     <Reference Include="SSW.Data.Framework, Version=10.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SSW.SQLDeploy.Core.1.0.1.0\lib\net45\SSW.Data.Framework.dll</HintPath>
+      <HintPath>..\packages\SSW.SQLDeploy.Core.1.0.2.0\lib\net45\SSW.Data.Framework.dll</HintPath>
     </Reference>
     <Reference Include="SSW.HealthCheck.Infrastructure, Version=1.0.23.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -95,12 +95,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SSW.HealthCheck.Mvc5.1.0.34.0\lib\net45\SSW.HealthCheck.Mvc5.dll</HintPath>
     </Reference>
-    <Reference Include="SSW.SQLDeploy.Core, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="SSW.SQLDeploy.Core, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SSW.SQLDeploy.Core.1.0.1.0\lib\net45\SSW.SQLDeploy.Core.dll</HintPath>
+      <HintPath>..\packages\SSW.SQLDeploy.Core.1.0.2.0\lib\net45\SSW.SQLDeploy.Core.dll</HintPath>
     </Reference>
-    <Reference Include="SSW.SqlVerify.Core">
-      <HintPath>..\packages\SSW.SqlVerify.Core.1.0.0.0\lib\net45\SSW.SqlVerify.Core.dll</HintPath>
+    <Reference Include="SSW.SqlVerify.Core, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SSW.SqlVerify.Core.1.1.0.0\lib\net45\SSW.SqlVerify.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -649,7 +650,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>

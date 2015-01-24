@@ -23,7 +23,6 @@
     <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
-    <TypeScriptToolsVersion>0.9</TypeScriptToolsVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -54,6 +53,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Core, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.1.2.1\lib\net40\Microsoft.AspNet.SignalR.Core.dll</HintPath>
@@ -79,9 +81,18 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
+    <Reference Include="SSW.Data.Framework">
+      <HintPath>..\packages\SSW.SQLDeploy.Core.1.0.2.0\lib\net45\SSW.Data.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="SSW.HealthCheck.Mvc4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SSW.HealthCheck.Mvc4.1.0.0.0\lib\net45\SSW.HealthCheck.Mvc4.dll</HintPath>
+    </Reference>
+    <Reference Include="SSW.SQLDeploy.Core">
+      <HintPath>..\packages\SSW.SQLDeploy.Core.1.0.2.0\lib\net45\SSW.SQLDeploy.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SSW.SqlVerify.Core">
+      <HintPath>..\packages\SSW.SqlVerify.Core.1.1.0.0\lib\net45\SSW.SqlVerify.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
