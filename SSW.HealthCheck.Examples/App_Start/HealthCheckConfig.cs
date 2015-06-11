@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using SSW.HealthCheck.Mvc5;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(SSW.HealthCheck.Mvc5.Examples.App_Start.HealthCheckConfig), "PreStart")]
 namespace SSW.HealthCheck.Mvc5.Examples.App_Start 
@@ -28,7 +29,7 @@ namespace SSW.HealthCheck.Mvc5.Examples.App_Start
             svc.Add(new DbConnectionTest(2));
 			svc.Add(new SmtpTest(3));
             svc.Setup<Hubs.HealthCheckHub>();
-			svc.Trace();
+            svc.Trace();
         }
     }
 }

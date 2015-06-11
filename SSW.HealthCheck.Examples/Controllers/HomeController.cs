@@ -8,7 +8,7 @@ namespace SSW.HealthCheck.Mvc5.Examples.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public virtual ActionResult Index()
         {
             return View();
         }

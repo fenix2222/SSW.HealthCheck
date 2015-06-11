@@ -1,3 +1,5 @@
+using SSW.HealthCheck.Mvc4;
+
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(SSW.HealthCheck.MVC4.Examples.App_Start.HealthCheckConfig), "PreStart")]
 namespace SSW.HealthCheck.MVC4.Examples.App_Start 
 {

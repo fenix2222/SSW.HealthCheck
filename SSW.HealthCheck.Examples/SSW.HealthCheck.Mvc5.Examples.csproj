@@ -91,10 +91,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SSW.HealthCheck.Core.1.0.38.0\lib\net45\SSW.HealthCheck.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="SSW.HealthCheck.Mvc5, Version=1.0.41.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SSW.HealthCheck.Mvc5.1.0.41.0\lib\net45\SSW.HealthCheck.Mvc5.dll</HintPath>
-    </Reference>
     <Reference Include="SSW.SQLDeploy.Core, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SSW.SQLDeploy.Core.1.0.2.0\lib\net45\SSW.SQLDeploy.Core.dll</HintPath>
@@ -133,6 +129,7 @@
     <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.1\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -389,6 +386,10 @@
     <ProjectReference Include="..\SSW.HealthCheck.SQLDeploy\SSW.HealthCheck.SQLDeploy.csproj">
       <Project>{49A47D42-A20F-4CFC-BE39-0E2960742131}</Project>
       <Name>SSW.HealthCheck.SQLDeploy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSW.HealthCheck\SSW.HealthCheck.Mvc5.csproj">
+      <Project>{58615bd3-f745-4cd7-96e7-9914eff0f313}</Project>
+      <Name>SSW.HealthCheck.Mvc5</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

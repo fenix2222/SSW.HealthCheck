@@ -10,14 +10,14 @@ using SSW.HealthCheck.Infrastructure;
 
 namespace SSW.HealthCheck.MVC4.Examples.Controllers
 {
-    public class HealthCheckController : Controller
+    public partial class HealthCheckController : Controller
     {
         private static readonly JsonSerializerSettings settings = new JsonSerializerSettings()
         {
             DateFormatHandling = DateFormatHandling.IsoDateFormat
         };
 
-        public ActionResult Index()
+        public virtual ActionResult Index()
         {
             if (this.HttpContext != null)
             {
@@ -28,7 +28,7 @@ namespace SSW.HealthCheck.MVC4.Examples.Controllers
             return View(tests);
         }
 
-        public ActionResult Check(string key)
+        public virtual ActionResult Check(string key)
         {
             var m = HealthCheckService.Default.GetByKey(key);
             m.RunAsync();

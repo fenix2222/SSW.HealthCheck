@@ -19,13 +19,13 @@ namespace SSW.HealthCheck.Mvc5.Examples.Controllers
     /// <summary>
     /// Health check API for tests. Allows running multiple or individual tests.
     /// </summary>
-    public class HealthCheckStatisticsController : ApiController
+    public partial class HealthCheckStatisticsController : ApiController
     {   
         /// <summary>
         /// Gets test run statistics
         /// </summary>
         /// <returns>Statistics of running test.</returns>
-        public TestRunSummary Get()
+        public virtual TestRunSummary Get()
         {
             var tests = HealthCheckService.Default.GetAll();
             var results = tests.Select(test => 
@@ -47,7 +47,7 @@ namespace SSW.HealthCheck.Mvc5.Examples.Controllers
     /// <summary>
     /// Health check API for tests. Allows running multiple or individual tests.
     /// </summary>
-    public class HealthCheckTestsController : ApiController
+    public partial class HealthCheckTestsController : ApiController
     {   
         /// <summary>
         /// Run all tests.
@@ -56,7 +56,7 @@ namespace SSW.HealthCheck.Mvc5.Examples.Controllers
         /// <param name="id">The optional test id.</param>
         /// <returns>Collection of all test results</returns>
         [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
-        public IEnumerable<TestRunInstance> Get(string id = null)
+        public virtual IEnumerable<TestRunInstance> Get(string id = null)
         {
             var tests = HealthCheckService.Default.GetAll().Where(t => string.IsNullOrEmpty(id) || t.Key == id);
             var results = tests.Select(test => 
