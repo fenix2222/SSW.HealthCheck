@@ -109,6 +109,9 @@
     <Content Include="Content\healthcheck\healthCheck.png" />
     <Content Include="Content\healthcheck\ssw.png" />
     <Content Include="Controllers\HealthCheckTestsController.cs.pp" />
+    <Compile Include="..\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
     <Compile Include="UrlHelperExtensions.cs" />
     <None Include="App.config" />
     <None Include="Build\TypeScriptConfiguration.targets" />
