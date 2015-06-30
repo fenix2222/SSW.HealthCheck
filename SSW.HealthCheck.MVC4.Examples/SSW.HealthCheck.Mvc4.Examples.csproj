@@ -86,7 +86,7 @@
     </Reference>
     <Reference Include="SSW.HealthCheck.Mvc4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SSW.HealthCheck.Mvc4.1.0.0.0\lib\net45\SSW.HealthCheck.Mvc4.dll</HintPath>
+      <HintPath>..\SSW.HealthCheck.MVC4\bin\Debug\SSW.HealthCheck.Mvc4.dll</HintPath>
     </Reference>
     <Reference Include="SSW.SQLDeploy.Core">
       <HintPath>..\packages\SSW.SQLDeploy.Core.1.0.2.0\lib\net45\SSW.SQLDeploy.Core.dll</HintPath>
