@@ -20,8 +20,8 @@
 			<dependency id="Microsoft.AspNet.SignalR" version="[1.2.1]" />
 			<dependency id="Newtonsoft.Json" version="6.0.6" />
 			<dependency id="Microsoft.AspNet.WebApi" version="5.0.0" />
-			<dependency id="SSW.HealthCheck.Core" version="1.0.38" />
-		</dependencies>
+			<dependency id="SSW.HealthCheck.Core" version="1.8.2" />
+    </dependencies>
 	</metadata>
 	<files>
 		<file src="Scripts\ssw.healthcheck.js" target="content\Scripts\" />

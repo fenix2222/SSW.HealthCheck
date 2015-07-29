@@ -125,7 +125,9 @@ module ssw {
                     warning.length = 0;
                     for (var k in allTests) {
                         var test = allTests[k];
-                        if (!test.IsRunning && test.IsDefault) {
+                        if (!test.IsRunning && test.IsDefault && !test.Result) {
+                            // do not automatically re-run tests that has failed.
+                            // this enable better troubleshooting of errors reported by the stats api
                             this.Check(test, true);
                         }
                     }
